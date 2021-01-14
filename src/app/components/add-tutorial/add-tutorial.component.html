@@ -1,0 +1,14 @@
+<div>
+  <div class="submit-form">
+    <ng-container>
+      <form [formGroup]="addTutorialForm" (ngSubmit)="saveTutorial()">
+        <label>Title</label>
+        <input type="text" class="form-control" formControlName="tutorialTitle" />
+        <label for="description">Description</label>
+        <input type="text" class="form-control" formControlName="tutorialDescription" />
+        <button class="btn btn-success" [disabled]="!addTutorialForm.valid" type="submit">Add</button>
+      </form>
+    </ng-container>
+
+  </div>
+</div>
